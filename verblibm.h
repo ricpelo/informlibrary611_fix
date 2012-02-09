@@ -1962,9 +1962,9 @@ Constant NOARTICLE_BIT  4096;       ! Print no articles, definite or not
 [ LMode3Sub; lookmode=3; print (string) Story; L__M(##LMode3); ];  ! Superbrief
 
 [ NoteArrival descin;
-    if (location == thedark) { lastdesc = thedark; return; }
     if (location ~= lastdesc) {
         if (location.initial ~= 0) PrintOrRun(location, initial);
+        if (location == thedark) { lastdesc = thedark; return; }
         descin = location;
         NewRoom();
         lastdesc = descin;
