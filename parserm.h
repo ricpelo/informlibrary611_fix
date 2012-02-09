@@ -3429,7 +3429,7 @@ Constant SCORE__DIVISOR = 20;
     for (i=0 : i<number_matched : i++) {
         while (match_list-->i == -1) {
             if (i == number_matched-1) { number_matched--; break; }
-            for (j=i : j<number_matched : j++) {
+            for (j=i : j<number_matched-1 : j++) {
                 match_list-->j = match_list-->(j+1);
                 match_scores-->j = match_scores-->(j+1);
             }
