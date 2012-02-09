@@ -5703,6 +5703,7 @@ statuswin_current = true;
 ];
 
 [ RestoreColours;    ! L61007
+    gg_statuswin_cursize = -1;
     if (clr_on) { ! check colour has been used
         SetColour(clr_fg, clr_bg, 2); ! make sure both sets of variables are restored
         SetColour(clr_fgstatus, clr_bgstatus, 1, true);
