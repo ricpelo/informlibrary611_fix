@@ -6521,7 +6521,7 @@ Object  LibraryExtensions "(Library Extensions)"
                     rval = obj.prop(a1, a2, a3);
                     if (rval == exitval) return rval;
                 }
-            return ~exitval;
+            return ~~exitval;
         ],
         RunWhile [ prop exitval a1 a2 a3
             obj rval;
