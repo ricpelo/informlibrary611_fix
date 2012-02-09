@@ -6365,7 +6365,9 @@ Array StorageForShortName -> 160 + WORDSIZE;
 
 [ Indefart o i;
     i = indef_mode; indef_mode = true;
-    if (o has proper) { indef_mode = NULL; print (PSN__) o; return; }
+    if (o has proper) {
+        indef_mode = NULL; print (PSN__) o; indef_mode = i; return;
+    }
     if (o provides article) {
         PrintOrRun(o, article, 1); print " ", (PSN__) o; indef_mode = i;
         return;
@@ -6375,7 +6377,9 @@ Array StorageForShortName -> 160 + WORDSIZE;
 
 [ CInDefArt o i;
     i = indef_mode; indef_mode = true;
-    if (o has proper) { indef_mode = NULL; print (PSN__) o; return; }
+    if (o has proper) {
+        indef_mode = NULL; print (PSN__) o; indef_mode = i; return;
+    }
     if (o provides article) {
         PrintCapitalised(o, article, 1); print " ", (PSN__) o; indef_mode = i;
         return;
