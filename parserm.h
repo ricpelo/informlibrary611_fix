@@ -3858,7 +3858,7 @@ Constant SCORE__DIVISOR = 20;
         #Endif; ! DEBUG
         if (parser_one == 0) parser_one = RunRoutines(thing, react_after);
       EACH_TURN_REASON:
-        if (thing.each_turn == 0 or NULL) return;
+        if (thing.&each_turn == 0) return;
         #Ifdef DEBUG;
         if (parser_trace >= 2)
               print "[Considering each_turn for ", (the) thing, "]^";
