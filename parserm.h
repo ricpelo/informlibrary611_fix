@@ -6268,9 +6268,9 @@ Array StorageForShortName -> 160 + WORDSIZE;
     if (o provides articles) {
         artval=(o.&articles)-->(acode+short_name_case*LanguageCases);
         if (capitalise)
-            print (Cap) artval, " ";
+            print (Cap) artval;
         else
-            print (string) artval, " ";
+            print (string) artval;
         if (pluralise) return;
         print (PSN__) o; return;
     }
