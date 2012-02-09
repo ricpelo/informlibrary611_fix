@@ -1486,7 +1486,7 @@ Constant NOARTICLE_BIT  4096;       ! Print no articles, definite or not
     ! which the player is not in.
 
     i = parent(item);
-    if (i ~= ancestor && (i has container || i has supporter)) {
+    if (i && i ~= ancestor && (i has container || i has supporter)) {
         after_recipient = i;
         k = action; action = ##LetGo;
         if (RunRoutines(i, before) ~= 0) { action = k; rtrue; }
